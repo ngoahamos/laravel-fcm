@@ -13,6 +13,11 @@
                         {{session()->get('sent')}}
                         </div>
                     @endif
+                        @if(session()->has('sent_error'))
+                            <div class="alert alert-danger" role="alert">
+                                {{session()->get('sent_error')}}
+                            </div>
+                        @endif
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
